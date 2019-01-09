@@ -1,5 +1,5 @@
 \chapter{Verbetering van een keyword tool}
-\label{ch:Verbetering van een keyword tool}
+\label{ch:tool}
 
 \section{Motivatie}
 \label{ch: Motivatie}
@@ -8,8 +8,11 @@ Een zoekwoordonderzoek bestaat er onder andere in alle gevonden zoekwoorden onde
 
 Wanneer we bepaalde gerelateerde zoekwoorden en hun zoekvolume te zien krijgen, ziet dit er als volgt uit (wanneer we zoeken op ‘restaurant Brugge’): 
 
-\includegraphics[width=\linewidth]{Bachelorproef/bachelor/img/Keywordplannervoorbeeld.png}
-(Screenshot van de Zoekwoordplanner die zoekwoordsuggesties geeft voor het zoekwoord 'restaurant Brugge')
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\linewidth]{img/Keywordplannervoorbeeld.png}
+\caption{Screenshot van de Zoekwoordplanner die zoekwoordsuggesties geeft voor het zoekwoord 'restaurant Brugge'}
+\end{figure}
 
 Er zijn vaak honderden, soms zelfs duizenden zoekwoorden. Om meer overzicht te krijgen hierin, is het een goed idee om dezelfde patronen te groeperen. De zoekwoorden ‘eten Brugge’, ‘uit eten in Brugge’ en ‘Brugge eten’ behoren allemaal tot dezelfde groepering (omdat de intenties van het zoekwoord dezelfde zijn). Van deze zoekwoorden kan je dan een clustergroep maken (van alle mensen die willen eten in Brugge). Die ziet eruit als volgt:
 
@@ -24,8 +27,11 @@ Met de zoekwoorden uit deze clustergroepen kan je uiteindelijk landingspagina’
 
 Bij WiSEO gebeurt dit telkens handmatig door middel van Spreadsheets, waarbij alles manueel overgetypt wordt. Vanuit de zoekwoordtool (zie bovenstaande foto) wordt alles één voor één overgenomen. Een voorbeeld van het resultaat: 
 
-\includegraphics[width=\linewidth]{Bachelorproef/bachelor/img/Clustergroepenvoorbeeld.png}
-(Voorbeeld van clustergroepen in een Excel bestand)
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\linewidth]{img/Clustergroepenvoorbeeld.png}
+\caption{Voorbeeld van clustergroepen in een Excel bestand}
+\end{figure}
 
 \section{Aanpak}
 \label{ch: Aanpak}
@@ -34,13 +40,19 @@ WiSEO's idee was om een eigen tool te programmeren zodat het proces vergemakkeli
 
 De werking van deze tool werd gebaseerd op een reeds bestaande tool, namelijk Kwfinder. Het is de bedoeling om een zoekwoord samen in te geven met een bepaald land en een bepaalde taal, om op die manier suggesties te krijgen van gerelateerde zoekwoorden en hun maandelijks zoekvolume. Bij Kwfinder ziet dit er als volgt uit: 
 
-\includegraphics[width=\linewidth]{Bachelorproef/bachelor/img/kwfindervoorbeeld.png}
-(Screenshot 1 van de tool Kwfinder)
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\linewidth]{img/kwfindervoorbeeld.png}
+\caption{Screenshot 1 van de tool Kwfinder}
+\end{figure}
 
 Na op de knop ‘Find keywords’ te klikken, verkrijg je het volgende resultaat: 
 
-\includegraphics[width=\linewidth]{Bachelorproef/bachelor/img/kwfindervoorbeeld2.png}
-(Screenshot 2 van de tool Kwfinder)
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\linewidth]{img/kwfindervoorbeeld2.png}
+\caption{Screenshot 2 van de tool Kwfinder}
+\end{figure}
 
 De zoekwoordsuggesties en zoekvolumes zijn nu zichtbaar, deze moeten geclusterd worden. De linkerkant van het programma wordt gebaseerd op de bovenstaande foto. 
 
@@ -50,13 +62,19 @@ Om alles te verduidelijken is hieronder een mock-up te vinden van hoe het progra
 
 Hier kan je een zoekwoord ingeven met een land en taal naar keuze om zo gerelateerde keywords en het zoekvolume te verkrijgen: 
 
-\includegraphics[width=\linewidth]{Bachelorproef/bachelor/img/Mockup.png}
-(Screenshot van mock-up 1)
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\linewidth]{img/Mockup.png}
+\caption{Screenshot van mock-up 1}
+\end{figure}
 
 Na op de knop ‘Vind zoekwoorden’ te klikken, verkrijg je het volgende resultaat: 
 
-\includegraphics[width=\linewidth]{Bachelorproef/bachelor/img/Mockup2.png}
-(Screenshot van mock-up 2)
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\linewidth]{img/Mockup2.png}
+\caption{Screenshot van mock-up 2}
+\end{figure}
 
 Er staat een overzichtelijk scherm met alle zoekwoorden aan de linkerkant en een optie om clusters te creëren aan de rechterkant. Bij dit scherm krijgt de gebruiker de optie om een zoekwoord te selecteren en in de juiste cluster toe te voegen (of om eerst een nieuwe cluster aan te maken). 
 
@@ -80,8 +98,11 @@ In de API-code kan je zelf verschillende elementen instellen: het zoekwoord waar
 
 Dit is een voorbeeld van een JSON-output: 
 
-\includegraphics[width=\linewidth]{Bachelorproef/bachelor/img/jsoncode.PNG}
-(Voorbeeld van jsoncode)           
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\linewidth]{img/jsoncode.PNG}
+\caption{Voorbeeld van jsoncode}
+\end{figure}
 
 Bij de sectie 'related' worden de gerelateerde zoekwoorden (of zoekwoordsuggesties) gegeven. De meest relevante elementen die gebruikt worden zijn 'key' en 'search\_volume' omdat we bij de output enkel deze twee nodig hebben. 
 
@@ -114,8 +135,11 @@ De eerste klasse is het startscherm waarbij de gebruiker drie waarden moet meege
 
 Het startscherm van de applicatie ziet er als volgt uit (opgemaakt in JavaFX Scenebuilder): 
 
-\includegraphics[width=\linewidth]{Bachelorproef/bachelor/img/keywordtoolscherm1.PNG}
-(Scherm 1 van de zelfgemaakte keywordtool)
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\linewidth]{img/keywordtoolscherm1.PNG}
+\caption{Scherm 1 van de zelfgemaakte keywordtool}
+\end{figure}
 
 In het tekstvak (onder 'geef zoekwoord in:') kan je een zoekwoord ingeven zoals 'Restaurant Brugge' om zoekwoordsuggesties te krijgen. In de eerste dropdownlist kan je een land selecteren (België of Nederland) om het zoekwoordvolume te krijgen voor een specifiek land. In de rechtste dropdownlist (Onder 'Geef taal in:') kan je de taal kiezen van het zoekwoord, Nederlands of Engels. 
 
@@ -125,8 +149,11 @@ De JSON-code wordt omgezet in leesbare taal voor de controller en er wordt een t
 
 Nadat er op de knop 'Vind zoekwoorden' geklikt is heeft het scherm een linker- en rechterkant. Aan de linkerkant wordt een tableview (lijst) gegenereerd met de zoekwoordsuggesties en het bijhorende zoekvolume. 
 
-\includegraphics[width=\linewidth]{Bachelorproef/bachelor/img/scherm2linkerkant.PNG}
-(Scherm 2, linkerkolom van de zelfgemaakte tool)
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\linewidth]{img/scherm2linkerkant.PNG}
+\caption{Scherm 2, linkerkolom van de zelfgemaakte tool}
+\end{figure}
 
 Bovenaan is er een knop om terug te keren naar de startpagina. De tableview van de linkerkolom wordt dan automatisch terug geledigd. 
 
@@ -148,5 +175,8 @@ De Java-Applicatie heeft twee controller-klassen. Het startscherm heeft een cont
 
 Nadat de JSON-code is omgezet naar een Arraylist, worden de gegevens in een Tableview omgezet. De tweede controller-klasse is verantwoordelijk voor de Tableviews (linker- en rechterkant). 
 
-\includegraphics[width=\linewidth]{Bachelorproef/bachelor/img/scherm2linkerkant.PNG}
-(Scherm 2, rechterkolom van de zelfgemaakte tool)
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\linewidth]{img/scherm2linkerkant.PNG}
+\caption{Scherm 2, rechterkolom van de zelfgemaakte tool}
+\end{figure}
